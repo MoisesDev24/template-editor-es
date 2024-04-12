@@ -492,6 +492,7 @@ body {
   padding: 45px;
   font-size: 40px;
   letter-spacing: 2px;
+  overflow-wrap: break-word;
   background-color: var(--color-primario);
 }
 
