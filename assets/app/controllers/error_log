@@ -1,0 +1,4 @@
+[06-Apr-2024 07:29:49 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function conexion() in /home/he270716/public_html/plataforma.kalstein.net/template-editor/assets/app/controllers/imagenesTienda_controller.php:18
+Stack trace:
+#0 {main}
+  thrown in /home/he270716/public_html/plataforma.kalstein.net/template-editor/assets/app/controllers/imagenesTienda_controller.php on line 18

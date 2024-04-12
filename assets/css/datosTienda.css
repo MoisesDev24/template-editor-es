@@ -1,0 +1,438 @@
+/* =============== ESTILOS DE LOS DATOS DE LA TIENDA ================== */
+.titulo_secundario {
+  width: 100%;
+  margin: 20px 0px 15px 0px;
+  padding-left: 45px;
+  font-family: var(--fuente-titulos);
+  text-align: left;
+  color: var(--color-neutro);
+}
+
+.contenedor_datos {
+  width: 100%;
+  margin: 0px;
+  padding: 2px 45px 30px;
+  overflow: hidden;
+}
+
+.form_datos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: flex-start;
+  align-items: center;
+  width: 100%;
+  margin: 0px;
+  padding: 20px 22px;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0px 2px 5px var(--color-neutro-opacity);
+  box-sizing: border-box;
+  overflow: hidden;
+  animation: mostrarContenedor 0.6s ease-in-out 1;
+}
+
+@keyframes mostrarContenedor {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+/* -------------------------------------- LOGO */
+.form_datos_logo {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  margin-bottom: 55px;
+}
+
+.logo_titulo {
+  position: relative;
+}
+
+.logo_titulo::before {
+  position: absolute;
+  top: -8%;
+  left: 2%;
+  content: "Store Logo";
+  font-family: var(--fuente-parrafos);
+  font-weight: bold;
+}
+
+.form_datos_logo > label {
+  position: absolute;
+  bottom: 10%;
+  left: 25px;
+  display: block;
+  padding: 10px 14px;
+  border: 2px solid var(--color-primario);
+  border-radius: 15px;
+  font-family: var(--fuente-parrafos);
+  font-weight: bold;
+  background-color: var(--color-primario);
+  color: var(--color-secundario);
+  transition: 0.3s ease all;
+  z-index: 9999;
+}
+
+.form_datos_logo > label:hover {
+  background-color: var(--color-secundario);
+  color: var(--color-primario);
+  cursor: pointer;
+}
+
+.form_datos__logo {
+  position: relative;
+  height: 280px;
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  background-size: 300px 80px;
+  background-position: center 20px;
+  background-repeat: no-repeat;
+  overflow: hidden; /* Asegúrate de que nada se salga del contenedor */
+}
+
+#img_insertada {
+  position: absolute;
+  top: 6%;
+  left: 4%;
+  max-width: 92%;
+  max-height: 94%;
+  object-fit: contain;
+}
+
+.contenedor_vista_previa {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+#logo_tienda {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.form_datos__logo .image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.form_datos__logo .image-container img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+}
+
+.form_datos__logo::before {
+  content: "\f0ee";
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 15px;
+  border: 2px dashed var(--color-primario);
+  border-radius: 15px;
+  box-sizing: border-box;
+  font-family: "Font Awesome 6 Free";
+  font-size: 50px;
+  font-weight: 900;
+  text-align: center;
+  color: var(--color-primario);
+}
+
+.form_datos__logo.has-image::before {
+  content: ""; /* Oculta el contenido del ::before cuando hay una imagen presente */
+}
+
+#logo_tienda:hover + .form_datos__logo::before,
+#logo_tienda:active + .form_datos__logo::before {
+  border-color: #2980b9;
+  color: #34495e;
+}
+
+#logo_tienda:focus + .form_datos__logo::before {
+  outline: 2px dashed var(--color-primario);
+  outline-offset: -10px;
+}
+
+.form_datos_informacion {
+  width: 46%;
+}
+
+.form_datos_item {
+  position: relative;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+.form_datos_item > label {
+  display: block;
+  width: 100%;
+  margin-bottom: 5px;
+  font-family: var(--fuente-parrafos);
+  font-weight: bold;
+}
+
+.form_datos_item > input {
+  width: 100%;
+  margin: 4px 0px 22px;
+  padding: 13px 12px;
+  border: 2px solid rgb(183 183 183 / 70%);
+  border-radius: 15px;
+  outline: none;
+  font-family: var(--fuente-parrafos);
+  background-color: var(--color-secundario);
+}
+
+.form_datos_item > select {
+  width: 100%;
+  margin: 4px 0px 22px;
+  padding: 13px 12px;
+  border: 2px solid rgb(183 183 183 / 70%);
+  border-radius: 15px;
+  outline: none;
+  font-family: var(--fuente-parrafos);
+  background-color: var(--color-secundario);
+}
+
+.alto-extra > input {
+  height: 13vh;
+}
+
+.form_datos_informacion_extra {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 48%;
+  margin-top: 0px;
+}
+
+.form_datos_item_extra {
+  position: relative;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.form_datos_item_extra > label {
+  display: block;
+  width: 100%;
+  margin-bottom: 5px;
+  font-family: var(--fuente-parrafos);
+  font-weight: bold;
+}
+
+.form_datos_item_extra > textarea {
+  width: 100%;
+  margin: 4px 0px 0px;
+  padding: 13px 12px;
+  border: 2px solid rgb(183 183 183 / 70%);
+  border-radius: 15px;
+  outline: none;
+  font-family: var(--fuente-parrafos);
+  background-color: var(--color-secundario);
+}
+
+input:focus,
+textarea:focus {
+  border: 2px solid var(--color-primario);
+}
+
+/* ------------------------------------------- Botones */
+.contenedor_datos_botones {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 16px 0px 0px;
+}
+
+.btn_limpiar {
+  margin: 0px 5px 0px 0px;
+  padding: 12px 30px;
+  border: 2px solid var(--color-secundario);
+  border-radius: 15px;
+  box-sizing: border-box;
+  font-family: var(--fuente-parrafos);
+  font-size: 18px;
+  font-weight: bold;
+  background-color: var(--color-terciario);
+  color: var(--color-secundario);
+  transition: 0.3s ease all;
+  overflow: hidden;
+}
+
+.btn_aceptar {
+  margin: 0px 0px 0px 5px;
+  padding: 12px 30px;
+  border: 2px solid var(--color-secundario);
+  border-radius: 15px;
+  box-sizing: border-box;
+  font-family: var(--fuente-parrafos);
+  font-size: 18px;
+  font-weight: bold;
+  background-color: var(--color-primario);
+  color: var(--color-secundario);
+  transition: 0.3s ease all;
+  overflow: hidden;
+}
+
+.btn_limpiar:hover {
+  border: 2px solid var(--color-terciario);
+  background-color: var(--color-secundario);
+  color: var(--color-terciario);
+  cursor: pointer;
+}
+
+.btn_aceptar:hover {
+  border: 2px solid var(--color-primario);
+  background-color: var(--color-secundario);
+  color: var(--color-primario);
+  cursor: pointer;
+}
+
+/* =============================================== MEDIA QUERIES */
+@media (max-width: 760px) {
+  .titulo_secundario {
+    padding-left: 0px;
+    text-align: center;
+  }
+
+  .contenedor_datos {
+    padding: 2px 40px 25px;
+  }
+
+  .form_datos {
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+  }
+
+  .form_datos_informacion {
+    width: 100%;
+  }
+
+  .form_datos_logo {
+    width: 100%;
+  }
+
+  .form_datos_informacion_extra {
+    width: 100%;
+  }
+
+  .form_datos_item_extra {
+    width: 100%;
+  }
+
+  .form_datos_item_extra > textarea {
+    height: 17vh;
+  }
+}
+
+@media (max-width: 670px) {
+  .form_datos_informacion_extra {
+    margin-top: 18px;
+  }
+
+  .form_datos_logo {
+    margin-bottom: 35px;
+  }
+
+  .form_datos__logo::before {
+    content: "";
+  }
+
+  .form_datos__logo > img {
+    top: 5.5% !important;
+    left: calc(100% - 360px) !important;
+    max-width: 320px !important;
+  }
+
+  .form_datos_item_extra {
+    margin-top: 0px;
+  }
+}
+
+@media (max-width: 580px) {
+  .titulo_secundario {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .contenedor_datos {
+    padding: 2px 25px 25px;
+  }
+
+  .logo_titulo::before {
+    top: -10%;
+  }
+
+  .form_datos__logo {
+    height: 28vh;
+  }
+
+  .form_datos_logo > label {
+    padding: 8px 10px;
+  }
+
+  .form_datos__logo > img {
+    top: 6% !important;
+    left: calc(100% - 250px) !important;
+    max-width: 190px !important;
+  }
+}
+
+@media (max-width: 520px) {
+  .titulo_secundario {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 470px) {
+  .form_datos__logo > img {
+    left: calc(100% - 215px) !important;
+  }
+
+  .contenedor_datos_botones {
+    flex-direction: column;
+  }
+
+  .btn_limpiar {
+    margin: 0px 0px 0px 0px;
+    padding: 14px 50px;
+  }
+
+  .btn_aceptar {
+    margin: 0px 0px 0px 0px;
+    padding: 14px 50px;
+  }
+}
+
+@media (max-width: 420px) {
+  .form_datos__logo > img {
+    top: 12% !important;
+    left: calc(100% - 180px) !important;
+    max-width: 165px !important;
+  }
+}

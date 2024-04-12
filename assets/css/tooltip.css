@@ -1,0 +1,165 @@
+/* ============== Estilos del Tooltip ==================== */
+
+.tooltip_btn {
+	position: absolute;
+	top: 5%;
+	right: 1%;
+	margin: 0px;
+	padding: 0px;
+	fill: var(--color-neutro);
+	transition: 0.3s ease all;
+	z-index: 99999;
+}
+
+.tooltip_btn:hover {
+	fill: var(--color-primario);
+	cursor: pointer;
+}
+
+.tooltip_btn_small {
+	margin: 0px 0px 0px 2px;
+	padding: 0px;
+	fill: var(--color-neutro);
+	transition: 0.3s ease all;
+	z-index: 99999;
+}
+
+.tooltip_btn_small:hover {
+	fill: var(--color-primario);
+	cursor: pointer;
+}
+
+.tooltip_logo {
+	position: absolute;
+	top: -8%;
+	right: 5%;
+}
+
+/* ----------------------------------- Contenedor del Tooltip */
+.contenedor_tooltip {
+	position: absolute;
+	top: 28%;
+	right: -30px;
+	display: none;
+	width: 400px;
+	border-bottom: 3px solid var(--color-primario);
+	box-sizing: border-box;
+	background-color: #d9d9d9;
+	transition: 0.3s ease all;
+	animation: showTooltip 0.7s ease-in-out 1;
+	z-index: 9999999;
+}
+
+.contenedor_tooltip_small {
+	position: absolute;
+	top: 37%;
+	right: 0%;
+	display: none;
+	width: 380px;
+	border-bottom: 3px solid var(--color-primario);
+	box-sizing: border-box;
+	background-color: #d9d9d9;
+	transition: 0.3s ease all;
+	animation: showTooltip 0.7s ease-in-out 1;
+	z-index: 9999999;
+}
+
+@keyframes showTooltip {
+	from {transform: translateX(80px);}
+	to {transform: translateX(0px);}
+}
+
+.tooltip {
+	position: relative;
+	width: 100%;
+	padding: 20px;
+}
+
+.tooltip > p {
+	font-family: var(--fuente-parrafos);
+	font-size: 18px;
+	text-align: justify;
+}
+
+.tooltip::before {
+	position: absolute;
+	top: -29px;
+	right: 10%;
+	content: '';
+	border-top: 15px solid transparent;
+	border-right: 15px solid transparent;
+	border-bottom: 15px solid #d9d9d9;
+	border-left: 15px solid transparent;
+}
+
+.tooltip_small {
+	position: relative;
+	width: 100%;
+	padding: 20px;
+}
+
+.tooltip_small > p {
+	font-family: var(--fuente-parrafos);
+	font-size: 18px;
+	text-align: justify;
+}
+
+.tooltip_small::before {
+	position: absolute;
+	top: -29px;
+	left: 2%;
+	content: '';
+	border-top: 15px solid transparent;
+	border-right: 15px solid transparent;
+	border-bottom: 15px solid #d9d9d9;
+	border-left: 15px solid transparent;
+}
+
+@media (max-width: 600px) {
+	.form_datos {
+		overflow: visible;
+	}
+
+	.tooltip_btn {
+		top: 4%;
+    	right: 2%;
+	}
+
+	.tooltip_logo {
+		top: -10%;
+	}
+
+	.contenedor_tooltip {
+		top: 18%;
+		right: -10px !important;
+		width: 320px;
+	}
+
+	.contenedor_tooltip_small {
+		top: 26%;
+		right: -8%;
+		width: 320px;
+	}
+}
+
+@media (max-width: 500px) {
+	.tooltip_btn {
+	    top: 1%;
+	    right: 1%;
+	    width: 25px;
+	    height: 25px;
+	}
+
+	.contenedor_tooltip {
+		width: 280px;
+	}
+
+	.tooltip_small::before {
+		position: absolute;
+		left: 82%;
+	}
+
+	.contenedor_tooltip_small {
+		width: 280px;
+	}
+}
