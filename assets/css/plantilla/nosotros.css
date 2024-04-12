@@ -38,6 +38,8 @@
     border-radius: 12px;
     box-shadow: 1px 1px 5px var(--color-neutro-opacity);
     transition: 0.3s ease all;
+    text-wrap: pretty;
+    overflow-wrap: break-word;
 }
 
 .historia_datos:hover {
@@ -58,6 +60,7 @@
     text-align: justify;
     line-height: 24px;
     color: var(--color-neutro);
+    width: 100%;
 }
 
 .historia_datos_dos {
@@ -154,6 +157,8 @@
     align-items: center;
     width: 50%;
     padding: 20px 30px;
+    text-wrap: pretty;
+    overflow-wrap: break-word;
 }
 
 .mision_datos > h2 {
@@ -170,6 +175,7 @@
     text-align: justify;
     line-height: 24px;
     color: var(--color-neutro);
+    width: 100%;
 }
 
 .mision_datos_dos {
@@ -256,6 +262,8 @@
     border-radius: 12px;
     box-shadow: 1px 1px 5px var(--color-neutro-opacity);
     transition: 0.3s ease all;
+    text-wrap: pretty;
+    overflow-wrap: break-word;
 }
 
 .vision_datos:hover {
@@ -276,6 +284,7 @@
     text-align: justify;
     line-height: 24px;
     color: var(--color-neutro);
+    width: 100%;
 }
 
 .vision_datos_dos {
